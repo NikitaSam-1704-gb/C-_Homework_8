@@ -21,7 +21,7 @@ int[,] FillRandomArray(int rows, int cols, int minValue, int maxValue)
     for(int i=0; i<rows; i++)
     {
         for(int j=0; j<cols; j++)
-            array[i,j]=new Random().Next(minValue,maxValue);
+            array[i,j]=new Random().Next(minValue,maxValue+1);
     }
     PrintArray(array);
     return array;
@@ -49,11 +49,11 @@ int[,] ChangeFirstLast (int[,] array)
        array[fistI,j]=array[lastI,j];
        array[lastI,j]=temp;
     }
+    PrintArray (array);
     return array;
 }
 
 
 (int rows, int cols) parametrsWork=EnterParametrsArray();
 int[,] massiv=FillRandomArray(parametrsWork.rows, parametrsWork.cols, 0, 10);
-int[,] massivChange=ChangeFirstLast (massiv);
-PrintArray (massivChange);
+massiv=ChangeFirstLast (massiv);
