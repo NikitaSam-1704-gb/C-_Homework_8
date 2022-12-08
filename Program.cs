@@ -45,7 +45,7 @@ void PrintArrayThreeDimensional (int [,,] array)
         for(int i=0; i<array.GetLength(0); i++)
         {
             for(int j=0; j<array.GetLength(1); j++)
-                Write($" {array[i,j,k]}  k,i,j({k+1},{i+1},{j+1})\t");
+                Write($" {array[i,j,k]}  i,j,k({k+1},{i+1},{j+1}{k+1})\t");
             WriteLine();
         }
     WriteLine();
